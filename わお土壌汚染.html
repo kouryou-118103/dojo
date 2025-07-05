@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>土壌おいしい😋</title>
+    <link rel="stylesheet" />
+    <meta
+      name="description"
+      content="日本の四大鉱害事件をはじめ、土壌汚染の歴史的事例とその影響を振り返り、現代の環境問題への取り組みを紹介します。"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01" />
+    </div>
+    <div id="overlay" class="hidden"></div>
+    <button id="toggle-button" class="固定">≡</button>
+    <div id="sidebar" class="hidden">
+      <h2>
+        <ruby>設定<rt>せってい</rt></ruby>
+      </h2>
+      <section>
+        <p>
+          この<ruby>ページ<rt>ぺいじ</rt></ruby
+          >では<ruby>PC<rt>ぴいしい</rt>モード<rt>もおど</rt></ruby
+          >と<ruby>スマホモード<rt>すまほもおど</rt></ruby
+          >を<ruby>自動<rt>じどう</rt></ruby
+          >で<ruby>切<rt>き</rt></ruby
+          >り<ruby>替<rt>か</rt></ruby
+          >えています。<ruby>次<rt>つぎ</rt></ruby
+          >の<ruby>ボタン<rt>ぼたん</rt></ruby
+          >を<ruby>押<rt>お</rt></ruby
+          >して<ruby>強制<rt>きょうせい</rt>的<rt>てき</rt></ruby
+          >に<ruby>別<rt>べつ</rt></ruby
+          >の<ruby>モード<rt>もおど</rt></ruby
+          >にすることができます。
+        </p>
+        <button id="toggleButton2" class="hide-big">
+          <ruby>PC<rt>ぴいしい</rt>モード<rt>もおど</rt></ruby
+          >にする
+        </button>
+        <button id="toggleButton3" class="hide-on-portrait">
+          <ruby>スマホ<rt>すまほ</rt>モード<rt>もおど</rt></ruby
+          >にする
+        </button>
+        <p>
+          この<ruby>ページ<rt>ぺいじ</rt></ruby
+          >では<ruby>ルビ<rt>るび</rt></ruby
+          >（ふりがな）が<ruby>表示<rt>ひょうじ</rt></ruby
+          >されています。これが<ruby>不要<rt>ふよう</rt></ruby
+          >な<ruby>場合<rt>ばあい</rt></ruby
+          >は<ruby>次<rt>つぎ</rt></ruby
+          >の<ruby>ボタン<rt>ぼたん</rt></ruby
+          >を<ruby>押<rt>お</rt></ruby
+          >して<ruby>非表示<rt>ひひょうじ</rt></ruby
+          >にできます。
+        </p>
+        <button id="toggleRubyBtn">
+          <ruby>ルビ<rt>るび</rt></ruby
+          >を<ruby>非<rt>ひ</rt>表示<rt>ひょうじ</rt></ruby
+          >にする</button
+        ><br /><br /><br />
+      </section>
+    </div>
+    <p class="hide-big">
+      <ruby>現在<rt>げんざい</rt></ruby
+      >横幅<ruby>よこはば</ruby>が<ruby>小<rt>ちい</rt></ruby
+      >さい<ruby>画面<rt>がめん</rt></ruby
+      >から<ruby>閲覧<rt>えつらん</rt></ruby
+      >しているので<ruby>スマホモード<rt>すまほもおど</rt></ruby
+      >になっています。そのため<ruby>一部<rt>いちぶ</rt></ruby
+      >の<ruby>画像<rt>がぞう</rt></ruby
+      >などが<ruby>非表示<rt>ひひょうじ</rt></ruby
+      >になっています。<ruby>次<rt>つぎ</rt></ruby
+      >の<ruby>ボタン<rt>ぼたん</rt></ruby
+      >を<ruby>押<rt>お</rt></ruby
+      >して<ruby>強制<rt>きょうせい</rt>的<rt>てき</rt></ruby
+      >に<ruby>画像<rt>がぞう</rt></ruby
+      >などを<ruby>表示<rt>ひょうじ</rt></ruby
+      >することができます。
+    </p>
+    <p class="赤 hide-big">
+      <ruby>注意<rt>ちゅうい</rt></ruby
+      >：これを<ruby>有効<rt>ゆうこう</rt></ruby
+      >にすると<ruby>レイアウト<rt>れいあうと</rt></ruby
+      >が<ruby>崩<rt>くず</rt></ruby
+      >れる<ruby>虞<rt>おそれ</rt></ruby
+      >があります。
+    </p>
+    <button id="toggleButton" class="hide-big">
+      <ruby>PC<rt>ぴいしい</rt>モード<rt>もおど</rt></ruby
+      >にする
+    </button>
+    <h1 class="header">
+      Re:0から<ruby>始<rt>はじ</rt></ruby
+      >める<ruby>土壌<rt>どじょう</rt>汚染<rt>おせん</rt></ruby>
+    </h1>
+    <div class="image-text-container">
+      <img
+        src="https://cdn.glitch.global/3f2381e8-56d9-48d5-b0dd-2329b502f128/pic1.webp?v=1728129025732"
+        alt="土壌汚染の画像"
+        class="image hide-on-portrait thumbnail"
+        width="450"
+        height="450"
+      />
+      <section>
+        <div class="text-content">
+          <!--<p class="拡大2">土壌汚染とは</p><p class="拡大2">土壌に</p><p class="拡大2">有害物質が</p><p class="拡大2">蓄積される</p><p class="拡大2">状態です</p><p class="拡大2">。</p><p class="拡大2">有害物質には、</p><p class="拡大2">重金属や</p><p class="拡大2">農薬、</p><p class="拡大2">有機溶剤など</p><p class="拡大2">が含まれます。</p><p class="拡大2">これらは</p><p class="拡大2">様々な</p><p class="拡大2">産業や</p><p class="拡大2">農業活動に</p><p class="拡大2">よって</p><p class="拡大2">土壌に</p><p class="拡大2">持ち込まれます。</p><p class="拡大2">特に、</p><p class="拡大2">工業地帯では、</p><p class="拡大2">工場からの</p><p class="拡大2">排水や</p><p class="拡大2">廃棄物によって</p><p class="拡大2">土壌が</p><p class="拡大2">汚染されることも</p><p class="拡大2">多く、</p><p class="拡大2">周囲の環境に</p><p class="拡大2">悪影響を</p><p class="拡大2">及ぼしています。</p><p class="拡大2">また、</p><p class="拡大2">土壌汚染は</p><p class="拡大2">食物連鎖を</p><p class="拡大2">通じて</p><p class="拡大2">広がり、</p><p class="拡大2">動植物にも</p><p class="拡大2">悪影響をあたえ、</p><p class="拡大2">食料の</p><p class="拡大2">安全が脅かされることも</p><p class="拡大2">あります。</p><p class="拡大2">さらに、</p><p class="拡大2">土壌の</p><p class="拡大2">質が</p><p class="拡大2">低下すると、</p><p class="拡大2">農地の生産性も</p><p class="拡大2">低下し、</p><p class="拡大2">持続可能な農業が</p><p class="拡大2">困難になります。</p><p class="拡大2">このような</p><p class="拡大2">状況を</p><p class="拡大2">回避・改善</p><p class="拡大2">するためには、</p><p class="拡大2">産業廃棄物の</p><p class="拡大2">適切な管理が</p><p class="拡大2">求められます</p><p class="拡大2">。</p><br><h2 class="拡大 震えるh2">つまり...</h2>-->
+          <h2 class="summary-header">
+            <ruby>土壌<rt>どじょう</rt>汚染<rt>おせん</rt></ruby
+            >の<ruby>概要<rt>がいよう</rt></ruby>
+          </h2>
+          <ul class="summary-list">
+            <li>
+              <strong
+                ><ruby>土壌<rt>どじょう</rt>汚染<rt>おせん</rt></ruby
+                >とは</strong
+              >
+              <ul>
+                <li>
+                  <ruby>土壌<rt>どじょう</rt></ruby
+                  >に<u class="赤"
+                    ><ruby>有害<rt>ゆうがい</rt>物質<rt>ぶっしつ</rt></ruby></u
+                  >（<ruby>重<rt>じゅう</rt>金属<rt>きんぞく</rt></ruby
+                  >、<ruby>農薬<rt>のうやく</rt></ruby
+                  >、<ruby>有機<rt>ゆうき</rt>溶剤<rt>ようざい</rt></ruby
+                  >など）が<ruby>蓄積<rt>ちくせき</rt></ruby
+                  >される<ruby>状態<rt>じょうたい</rt></ruby>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong
+                ><ruby>原因<rt>げんいん</rt></ruby></strong
+              >
+              <ul>
+                <li>
+                  <ruby>工場<rt>こうじょう</rt></ruby
+                  >からの<u class="赤"
+                    ><ruby>排水<rt>はいすい</rt></ruby></u
+                  >や<u class="赤"
+                    ><ruby>廃棄物<rt>はいきぶつ</rt></ruby></u
+                  >
+                </li>
+                <li>
+                  <ruby>他<rt>ほか</rt></ruby
+                  >にも、<ruby>農業<rt>のうぎょう</rt></ruby
+                  >などの<u class="赤"
+                    ><ruby>様々<rt>さまざま</rt></ruby
+                    >な<ruby>産業<rt>さんぎょう</rt></ruby></u
+                  >が<ruby>原因<rt>げんいん</rt></ruby
+                  >に
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong
+                ><ruby>影響<rt>えいきょう</rt></ruby></strong
+              >
+              <ul>
+                <li>
+                  <ruby>食物<rt>しょくもつ</rt>連鎖<rt>れんさ</rt></ruby
+                  >で<ruby>動植物<rt>どうしょくぶつ</rt></ruby
+                  >に
+                </li>
+                <li>
+                  <ruby>人間<rt>にんげん</rt></ruby
+                  >の<u class="赤"
+                    ><ruby>食<rt>しょく</rt>生活<rt>せいかつ</rt></ruby></u
+                  >にも
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong
+                ><ruby>結果<rt>けっか</rt></ruby></strong
+              >
+              <ul>
+                <li>
+                  <u class="赤"
+                    ><ruby>土壌<rt>どじょう</rt></ruby
+                    >の<ruby>質<rt>しつ</rt></ruby
+                    >が<ruby>低下<rt>ていか</rt></ruby></u
+                  >し、<ruby>農地<rt>のうち</rt></ruby
+                  >の<ruby>生産<rt>せいさん</rt>性<rt>せい</rt></ruby
+                  >が<ruby>低下<rt>ていか</rt></ruby>
+                </li>
+                <li>
+                  <u class="赤"
+                    ><ruby>持続<rt>じぞく</rt>可能<rt>かのう</rt></ruby
+                    >な<ruby>農業<rt>のうぎょう</rt></ruby
+                    >が<ruby>困難<rt>こんなん</rt></ruby></u
+                  >に
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <p class="hide-on-portrait">
+      <ruby>画像<rt>がぞう</rt></ruby
+      >は<ruby>imgタグ<rt>いみっじたぐ</rt></ruby
+      >です。
+    </p>
+    <marquee scrollamount="16">
+      <ruby>失礼<rt>しつれい</rt></ruby
+      >しまーす　𓅨𓅭𓅓　𓅨𓅭𓅓　＜<ruby
+        >土壌<rt>どじょう</rt>汚染<rt>おせん</rt></ruby
+      >
+    </marquee>
+    <section>
+      <h2 class="summary-header">
+        <ruby>四大<rt>よんだい</rt>鉱害<rt>こうがい</rt></ruby>
+      </h2>
+      <div class="image-text-container2">
+        <img
+          src="https://cdn.glitch.global/3f2381e8-56d9-48d5-b0dd-2329b502f128/pic2.webp?v=1728109518837"
+          alt="四大鉱害の画像"
+          width="400"
+          height="400"
+          class="summary-image hide-on-portrait thumbnail"
+        />
+        <div class="text-content">
+          <p>
+            <ruby>鉱山<rt>こうざん</rt></ruby
+            >からの<ruby>有害<rt>ゆうがい</rt>物質<rt>ぶっしつ</rt></ruby
+            >が<ruby>原因<rt>げんいん</rt></ruby
+            >で<ruby>発生<rt>はっせい</rt></ruby
+            >した<ruby>大<rt>だい</rt>規模<rt>きぼ</rt></ruby
+            >な<ruby>公害<rt>こうがい</rt>事件<rt>じけん</rt></ruby
+            ><br />そのうち<ruby>大<rt>おお</rt></ruby
+            >きな<ruby>事件<rt>じけん</rt></ruby
+            >4つ↓
+          </p>
+          <ul class="summary-list">
+            <li>
+              <strong>足尾銅山（あしおどうざん）</strong>
+              <ul>
+                <li>
+                  <u class="赤"
+                    ><ruby>日本<rt>にほん</rt>初<rt>はつ</rt></ruby></u
+                  >の<ruby>公害<rt>こうがい</rt>事件<rt>じけん</rt></ruby>
+                </li>
+                <li>
+                  <ruby>原因<rt>げんいん</rt></ruby
+                  >は<u class="赤"
+                    ><ruby
+                      >亜<rt>あ</rt>硫酸<rt>りゅうさん</rt>ガス<rt
+                        >がす</rt
+                      ></ruby
+                    ></u
+                  >
+                </li>
+                <li>
+                  <ruby>結果<rt>けっか</rt></ruby
+                  >として<u class="赤"
+                    ><ruby>植物<rt>しょくぶつ</rt></ruby
+                    >が<ruby>育<rt>そだ</rt></ruby
+                    >たなくなった</u
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>別子銅山（べっしどうざん）</strong>
+              <ul>
+                <li>
+                  <u class="赤"
+                    ><ruby>鉱毒<rt>こうどく</rt>水<rt>すい</rt></ruby></u
+                  >と<u class="赤"
+                    ><ruby>ガス<rt>がす</rt></ruby></u
+                  >が<ruby>原因<rt>げんいん</rt></ruby>
+                </li>
+                <li>
+                  <u class="赤"
+                    ><ruby>作物<rt>さくもつ</rt></ruby
+                    >と<ruby>魚<rt>さかな</rt></ruby
+                    >が<ruby>取<rt>と</rt></ruby
+                    >れなくなった</u
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>日立鉱山（ひたちこうざん）</strong>
+              <ul>
+                <li>
+                  <u class="赤"
+                    ><ruby>鉱毒<rt>こうどく</rt>水<rt>すい</rt></ruby></u
+                  >と<u class="赤">
+                    <ruby
+                      >亜<rt>あ</rt>硫酸<rt>りゅうさん</rt>ガス<rt
+                        >がす</rt
+                      ></ruby
+                    ></u
+                  >が<ruby>主人<rt>しゅじん</rt>公<rt>こう</rt></ruby>
+                </li>
+                <li>
+                  <u class="赤"
+                    ><ruby>煙害<rt>えんがい</rt></ruby></u
+                  >が<ruby>発生<rt>はっせい</rt></ruby
+                  >した
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>小坂鉱山（こさかこうざん）</strong>
+              <ul>
+                <li>
+                  <u class="赤"
+                    ><ruby
+                      >亜<rt>あ</rt>硫酸<rt>りゅうさん</rt>ガス<rt
+                        >がす</rt
+                      ></ruby
+                    >による<ruby>煙害<rt>えんがい</rt></ruby></u
+                  >がひどかった
+                </li>
+                <li>
+                  <ruby>現在<rt>げんざい</rt></ruby
+                  >は<ruby>閉山<rt>へいざん</rt></ruby
+                  >していて、<ruby
+                    >観光<rt>かんこう</rt>施設<rt>しせつ</rt></ruby
+                  >になっている
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <marquee scrollamount="10">
+        <ruby>失礼<rt>しつれい</rt></ruby
+        >しまーす　𓅨𓅭𓅓　𓅨𓅭𓅓　＜<ruby
+          >四大<rt>よんだい</rt>公害<rt>こうがい</rt></ruby
+        >と<ruby>四大<rt>よんだい</rt>鉱害<rt>こうがい</rt></ruby
+        >は<ruby>違<rt>ちが</rt></ruby
+        >うよ
+      </marquee>
+    </section>
+    <section>
+      <h2 class="summary-header">
+        <ruby>四大<rt>よんだい</rt>鉱害<rt>こうがい</rt></ruby
+        >のその<ruby>後<rt>ご</rt></ruby
+        >
+      </h2>
+      <div class="image-text-container2">
+        <img
+          src="https://cdn.glitch.global/3f2381e8-56d9-48d5-b0dd-2329b502f128/pic5.webp?v=1728469428544"
+          alt="四大鉱害の画像"
+          width="400"
+          height="400"
+          class="summary-image hide-on-portrait thumbnail"
+        />
+        <div class="text-content">
+          <ul class="summary-list">
+            <li>
+              <strong>法制度の整備:</strong>
+              <ul>
+                <li>
+                  <u class="赤">公害対策基本法</u>や<u class="赤">環境基本法</u>などの法律が整備</li><li>企業や政府に公害防止の責任を明確にした</li><li>結果、適切な対策が取られるようになった
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>社会的意識の向上:</strong>
+              <ul>
+                <li>
+                  公害による健康被害や環境破壊が広く報道され、<u class="赤">国民の環境問題への関心が高まった</u></li><li><u class="赤">市民運動が活発化</u>し、企業や政府に対する圧力が強まった
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>企業の責任感:</strong>
+              <ul>
+                <li>
+                  公害が社会問題化する中で、<u class="赤">多くの企業が環境対策を強化</u>した</li><li>例えば、<u class="赤">排出物の管理</u>や<u class="赤">汚染物質の削減</u>に向けた技術革新など
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>科学技術の進展:</strong>
+              <ul>
+                <li>
+                  <u class="赤">環境浄化技術</u>や<u class="赤">廃水処理技術</u>の進展で鉱毒水やガスの影響を軽減</li><li><u class="赤">新しい技術の導入</u>で、環境への負荷が減少した。
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>被害者支援と補償:</strong>
+              <ul>
+                <li>
+                  <u class="赤">被害者への補償制度</u>が整備され、経済的な支援が行われた</li><li>結果、被害者の生活が改善された
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>地域振興と観光開発:</strong>
+              <ul>
+                <li>
+                  鉱山の閉山後、<u class="赤">観光地としての活用</u>が進められ、地域経済の再生が図られた</li><li>地域住民の生活が向上し、<u class="赤">環境保全に対する意識も高まった</u>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="image-text-container">
+        <img
+          src="https://cdn.glitch.global/3f2381e8-56d9-48d5-b0dd-2329b502f128/pic6.webp?v=1728470182713"
+          alt="土壌汚染の画像"
+          class="image hide-on-portrait thumbnail"
+          width="491"
+          height="491"
+        />
+        <div class="text-content">
+          <h2 class="summary-header">
+            <ruby>ミニ<rt>みに</rt>鉱害<rt>こうがい</rt></ruby
+            >を<ruby>起<rt>お</rt></ruby
+            >こさないためにできること
+          </h2>
+          <ul class="summary-list">
+            <li>
+              <strong>環境教育の受講:</strong>
+              <ul>
+                <li>
+                  <u class="赤">自分たちの行動が環境に与える影響</u>を理解できるように
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>リサイクルの実施:</strong>
+              <ul>
+                <li>
+                  資源を無駄にせず、<u class="赤">再利用する</u>ことで、廃棄物を減らし、鉱資源の消費を抑える
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>省エネの意識:</strong>
+              <ul>
+                <li>
+                  電気や水の使用を見直し、<u class="赤">無駄を減らす</u>ことで、環境負荷を軽減する
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>環境に優しい製品の選択:</strong>
+              <ul>
+                <li>
+                  <u class="赤">環境に配慮した製品</u>を選び、持続可能な生産を促進し、鉱害を引き起こすリスクを減少させる
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>地域の環境保全活動への参加:</strong>
+              <ul>
+                <li>
+                  地域の清掃活動や植樹活動に参加し、<u class="赤">環境保全に寄与</u>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>意識的な消費:</strong>
+              <ul>
+                <li>
+                  必要なものだけを購入し、<u class="赤">無駄な消費を避ける</u>ことで、資源の消費を抑え、鉱害を防ぐ
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <br />
+      <marquee scrollamount="13">
+        <ruby>失礼<rt>しつれい</rt></ruby
+        >しまーす　𓅨𓅭𓅓　𓅨𓅭𓅓　＜<ruby
+          >ミニ<rt>みに</rt>鉱害<rt>こうがい</rt>ってなに？</ruby
+        >
+      </marquee>
+    </section>
+    <section>
+      <h2 class="summary-header">
+        この<ruby>Web<rt>うぇぶ</rt>サイト<rt>さいと</rt></ruby
+        >を<ruby>シェア<rt>しぇあ</rt></ruby
+        >しよう！
+      </h2>
+      <div class="horizontal-container">
+        <label for="copyTarget"
+          ><ruby>リンク<rt>りんく</rt></ruby
+          >：</label
+        >
+        <input
+          id="copyTarget"
+          type="text"
+          value="https://dojo-osen.glitch.me/わお土壌汚染.html"
+          readonly
+          class="hide-on-portrait"
+        />
+        <button onclick="copyToClipboard()">
+          <ruby>コピー<rt>こぴい</rt></ruby
+          >する
+        </button>
+        <div id="copyMessage" style="display: none; color: green">
+          <ruby>コピー<rt>こぴい</rt></ruby
+          >しました！
+        </div>
+      </div>
+      <br /><br />
+      <div style="display: flex; gap: 10px">
+        <a
+          href="https://twitter.com/intent/tweet?url=https://dojo-osen.glitch.me/%E3%82%8F%E3%81%8A%E5%9C%9F%E5%A3%8C%E6%B1%9A%E6%9F%93.html&text=土壌汚染に関する記事を読んでください！"
+          target="_blank"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg"
+            alt="Twitterでシェア"
+            width="40"
+            height="40"
+          />
+        </a>
+        <a
+          href="https://www.facebook.com/sharer/sharer.php?u=https://dojo-osen.glitch.me/わお土壌汚染.html"
+          target="_blank"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+            alt="Facebookでシェア"
+            width="40"
+            height="40"
+          />
+        </a>
+        <a
+          href="https://social-plugins.line.me/lineit/share?url=https://dojo-osen.glitch.me/わお土壌汚染.html"
+          target="_blank"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg"
+            alt="LINEでシェア"
+            width="40"
+            height="40"
+          />
+        </a>
+      </div>
+
+      <p class="hide-on-portrait">
+        <ruby>二次元<rt>にじげん</rt>コード<rt>こおど</rt></ruby
+        >も<ruby>用意<rt>ようい</rt></ruby
+        >したよ↓
+      </p>
+      <img
+        src="https://cdn.glitch.global/3f2381e8-56d9-48d5-b0dd-2329b502f128/12a1f5222035a128da44dc357b17a6b1ab4a0e0b.png?v=1727512830650"
+        alt="このページのQRコード"
+        width="250"
+        height="250"
+        class="hide-on-portrait thumbnail"
+      />
+    </section>
+    <section>
+      <h2 class="summary-header">
+        <ruby>出典<rt>しゅってん</rt></ruby>
+      </h2>
+      <p>
+        <ruby>ウィキペディア<rt>うぃきぺでぃあ</rt></ruby
+        >の<ruby>執筆者<rt>しっぴつしゃ</rt></ruby
+        >の<ruby>皆様<rt>みなさま</rt></ruby
+        >ありがとうございました。
+      </p>
+      <div class="citation">
+        <h3>足尾鉱毒事件</h3>
+        <p><strong>著作者:</strong> ウィキペディアの執筆者</p>
+        <p><strong>発行所:</strong> ウィキペディア日本語版</p>
+        <p><strong>更新日時:</strong> 2024年8月6日 04:56 (UTC)</p>
+        <p><strong>取得日時:</strong> 2024年10月4日 01:30 (UTC)</p>
+        <p>
+          <strong>版指定URI:</strong>
+          <a
+            href="https://ja.wikipedia.org/w/index.php?title=%E8%B6%B3%E5%B0%BE%E9%89%B1%E6%AF%92%E4%BA%8B%E4%BB%B6&oldid=101374713"
+            target="_blank"
+            >https://ja.wikipedia.org/w/index.php?title=足尾鉱毒事件&oldid=101374713</a
+          >
+        </p>
+        <p>
+          <strong>主な執筆者:</strong>
+          <a
+            href="https://vs.aka-online.de/cgi-bin/wppagehiststat.pl?lang=ja.wikipedia&page=%E8%B6%B3%E5%B0%BE%E9%89%B1%E6%AF%92%E4%BA%8B%E4%BB%B6"
+            target="_blank"
+            >改版集計情報</a
+          >
+        </p>
+        <p><strong>項目の版番号:</strong> 101374713</p>
+      </div>
+      <div class="citation">
+        <h3>別子銅山</h3>
+        <p><strong>著作者:</strong> ウィキペディアの執筆者</p>
+        <p><strong>発行所:</strong> ウィキペディア日本語版</p>
+        <p><strong>更新日時:</strong> 2024年8月20日 03:10 (UTC)</p>
+        <p><strong>取得日時:</strong> 2024年10月4日 01:34 (UTC)</p>
+        <p>
+          <strong>版指定URI:</strong>
+          <a
+            href="https://ja.wikipedia.org/w/index.php?title=%E5%88%A5%E5%AD%90%E9%8A%85%E5%B1%B1&oldid=101542481"
+            target="_blank"
+            >https://ja.wikipedia.org/w/index.php?title=別子銅山&oldid=101542481</a
+          >
+        </p>
+        <p>
+          <strong>主な執筆者:</strong>
+          <a
+            href="https://vs.aka-online.de/cgi-bin/wppagehiststat.pl?lang=ja.wikipedia&page=%E5%88%A5%E5%AD%90%E9%8A%85%E5%B1%B1"
+            target="_blank"
+            >改版集計情報</a
+          >
+        </p>
+        <p><strong>項目の版番号:</strong> 101542481</p>
+      </div>
+      <div class="citation">
+        <h3>日立鉱山</h3>
+        <p><strong>著作者:</strong> ウィキペディアの執筆者</p>
+        <p><strong>発行所:</strong> ウィキペディア日本語版</p>
+        <p><strong>更新日時:</strong> 2024年9月29日 00:55 (UTC)</p>
+        <p><strong>取得日時:</strong> 2024年10月4日 01:40 (UTC)</p>
+        <p>
+          <strong>版指定URI:</strong>
+          <a
+            href="https://ja.wikipedia.org/w/index.php?title=%E6%97%A5%E7%AB%8B%E9%89%B1%E5%B1%B1&oldid=102018541"
+            target="_blank"
+            >https://ja.wikipedia.org/w/index.php?title=日立鉱山&oldid=102018541</a
+          >
+        </p>
+        <p>
+          <strong>主な執筆者:</strong>
+          <a
+            href="https://vs.aka-online.de/cgi-bin/wppagehiststat.pl?lang=ja.wikipedia&page=%E6%97%A5%E7%AB%8B%E9%89%B1%E5%B1%B1"
+            target="_blank"
+            >改版集計情報</a
+          >
+        </p>
+        <p><strong>項目の版番号:</strong> 102018541</p>
+      </div>
+      <div class="citation">
+        <h3>小坂鉱山</h3>
+        <p><strong>著作者:</strong> ウィキペディアの執筆者</p>
+        <p><strong>発行所:</strong> ウィキペディア日本語版</p>
+        <p><strong>更新日時:</strong> 2024年3月29日 20:43 (UTC)</p>
+        <p><strong>取得日時:</strong> 2024年10月4日 01:46 (UTC)</p>
+        <p>
+          <strong>版指定URI:</strong>
+          <a
+            href="https://ja.wikipedia.org/w/index.php?title=%E5%B0%8F%E5%9D%82%E9%89%B1%E5%B1%B1&oldid=99818765"
+            target="_blank"
+            >https://ja.wikipedia.org/w/index.php?title=小坂鉱山&oldid=99818765</a
+          >
+        </p>
+        <p>
+          <strong>主な執筆者:</strong>
+          <a
+            href="https://vs.aka-online.de/cgi-bin/wppagehiststat.pl?lang=ja.wikipedia&page=%E5%B0%8F%E5%9D%82%E9%89%B1%E5%B1%B1"
+            target="_blank"
+            >改版集計情報</a
+          >
+        </p>
+        <p><strong>項目の版番号:</strong> 99818765</p>
+      </div>
+    </section>
+    <section>
+      <h2 class="summary-header">
+        <ruby>ライセンス<rt>らいせんす</rt></ruby>
+      </h2>
+      <p class="minimoji">
+        作成日:2024-9-27 最終更新日:2024-10-6 ライセンス最終改定日:2024-10-5
+      </p>
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+        <img
+          alt="クリエイティブ・コモンズ ライセンス"
+          style="border-width: 0"
+          src="https://cdn.glitch.global/3f2381e8-56d9-48d5-b0dd-2329b502f128/pic4.webp?v=1728137463201"
+          width="88"
+          height="31"
+        />
+      </a>
+      <p>
+        © kouryou118103 - 2024<br />この作品は
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"
+          >クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス</a
+        >（CC BY-SA 4.0）の下に提供されています。CC BY-SA
+        4.0またはその将来のバージョンに基づいて、適切なクレジットを提供し、同じ条件で再配布することで転載できます。転載時の連絡は不要ですが、作品を利用する際にはクレジットを明示してください。
+      </p>
+    </section>
+    <script src="script.js" defer></script>
+  </body>
+</html>
