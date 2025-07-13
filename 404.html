@@ -4,23 +4,21 @@
   <meta charset="UTF-8" />
   <title>ページが見つかりません - リダイレクト中</title>
   <script>
-    // ハッシュがあればハッシュ付きのURLにリダイレクトする例（必要に応じて調整してください）
-    // ここでは単純に /dojo/ にリダイレクトします
     (function() {
-      // 現在のパスを取得
       const path = window.location.pathname;
-      // /dojo/ のみならリダイレクトしない（無限ループ防止）
       if (path === '/dojo/' || path === '/dojo/index.html') {
-        return;
+        return; // 無限ループ防止
       }
-      // それ以外は強制的に /dojo/ に飛ばす
-      window.location.href = '/dojo/';
+      // 5秒(5000ms)待ってリダイレクト
+      setTimeout(() => {
+        window.location.href = '/dojo/';
+      }, 5000);
     })();
   </script>
 </head>
 <body>
   <h1>ページが見つかりません</h1>
-  <p>数秒後にトップページに移動します。</p>
+  <p>5秒後にトップページに移動します。</p>
   <p><a href="/dojo/">こちらをクリックしてトップページへ戻る</a></p>
 </body>
 </html>
