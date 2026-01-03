@@ -196,51 +196,7 @@ input[type="text"] {
   color: black;
   z-index: 1001;
 }
-/* モーダルのスタイル */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1002;
-}
-/* 拡大表示された画像のスタイル */
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-}
-
-/* モーダルを閉じるためのスタイル */
-.close {
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  color: white;
-  font-size: 35px;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 1003;
-}
-#overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-  display: none;
-}
-#overlay:not(.hidden) {
-  display: block;
-}
-/* モーダルの背景設定 */
+/* モーダル背景 */
 .modal {
   display: none; /* デフォルトは非表示 */
   position: fixed;
@@ -249,55 +205,50 @@ input[type="text"] {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(33, 33, 33, 0.8); /* 暗い半透明背景 */
-  backdrop-filter: blur(8px); /* 背景をぼかす */
+  background-color: rgba(33, 33, 33, 0.8); /* 半透明背景 */
+  backdrop-filter: blur(8px); /* 背景ぼかし効果 */
 }
 
-/* モーダルコンテンツのスタイル */
+/* モーダルコンテンツ（白い四角） */
 .modal-content {
   background: #ffffff; /* ホワイトベースの背景 */
-  margin: 10% auto; /* 画面中央寄せ */
+  margin: 10% auto; /* 中央揃え */
   padding: 20px;
-  border-radius: 12px; /* 丸みを帯びた角 */
+  border-radius: 12px; /* 角丸デザイン */
   width: 90%;
-  max-width: 500px; /* モバイルにも対応 */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* マテリアル風影 */
+  max-width: 500px; /* モバイル対応 */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* モダンな影 */
+  position: relative; /* 内部要素の基準を配置 */
 }
 
-/* モーダルのタイトル */
+/* タイトル */
 .modal-content h2 {
   color: #212121; /* 深いグレー */
   font-size: 1.5em;
-  margin-bottom: 16px;
+  margin: 0;
   font-weight: 600;
+  display: inline-block; /* 横並びの基準 */
 }
 
-/* モーダルの本文 */
-.modal-content p {
-  color: #616161; /* ミディアムグレー */
-  font-size: 1em;
-  line-height: 1.6;
-}
-
-/* 閉じるボタン */
+/* 閉じるボタン（右上端に配置） */
 .close {
   color: #616161;
   font-size: 20px;
   font-weight: bold;
-  position: absolute;
-  top: 12px; /* モーダルコンテンツ内の上スペース */
-  right: 16px; /* モーダルコンテンツ内の右スペース */
   cursor: pointer;
-  background-color: #f5f5f5; /* ボタン背景色 */
-  border-radius: 50%; /* 丸いボタン */
-  width: 32px; /* ボタンのサイズ */
-  height: 32px;
-  display: flex; /* 中央配置用 */
-  align-items: center;
-  justify-content: center;
+  background-color: transparent; /* 背景透過（白四角に溶け込む） */
+  border: none; /* ボーダーを削除 */
+  position: absolute; /* モーダルコンテンツ内の右上 */
+  top: 15px;
+  right: 15px;
+  line-height: 1;
+  padding: 5px;
+  border-radius: 50%; /* 丸いデザイン */
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+/* ボタンホバー時のエフェクト */
 .close:hover {
-  color: #000000;
+  background-color: #f5f5f5; /* ホバー時に薄い灰色の背景 */
+  color: #000000; /* ホバー時の文字色 */
 }
