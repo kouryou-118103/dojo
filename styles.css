@@ -240,3 +240,57 @@ input[type="text"] {
 #overlay:not(.hidden) {
   display: block;
 }
+/* モーダルの背景設定 */
+.modal {
+  display: none; /* デフォルトは非表示 */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 33, 33, 0.8); /* 暗い半透明背景 */
+  backdrop-filter: blur(8px); /* 背景をぼかす */
+}
+
+/* モーダルコンテンツのスタイル */
+.modal-content {
+  background: #ffffff; /* ホワイトベースの背景 */
+  margin: 10% auto; /* 画面中央寄せ */
+  padding: 20px;
+  border-radius: 12px; /* 丸みを帯びた角 */
+  width: 90%;
+  max-width: 500px; /* モバイルにも対応 */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* マテリアル風影 */
+}
+
+/* モーダルのタイトル */
+.modal-content h2 {
+  color: #212121; /* 深いグレー */
+  font-size: 1.5em;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+/* モーダルの本文 */
+.modal-content p {
+  color: #616161; /* ミディアムグレー */
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+/* 閉じるボタン */
+.close {
+  color: #616161;
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out; /* ホバー時のスムーズな動き */
+}
+
+.close:hover {
+  color: #000000;
+}
