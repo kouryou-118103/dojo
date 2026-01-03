@@ -282,13 +282,20 @@ input[type="text"] {
 /* 閉じるボタン */
 .close {
   color: #616161;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   position: absolute;
-  top: 15px;
-  right: 20px;
+  top: 12px; /* モーダルコンテンツ内の上スペース */
+  right: 16px; /* モーダルコンテンツ内の右スペース */
   cursor: pointer;
-  transition: color 0.2s ease-in-out; /* ホバー時のスムーズな動き */
+  background-color: #f5f5f5; /* ボタン背景色 */
+  border-radius: 50%; /* 丸いボタン */
+  width: 32px; /* ボタンのサイズ */
+  height: 32px;
+  display: flex; /* 中央配置用 */
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .close:hover {
