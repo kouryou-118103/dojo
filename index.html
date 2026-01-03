@@ -12,6 +12,15 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
+  <div id="notice-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>お知らせ</h2>
+    <p>
+      このサイトは作者が高校2年生のときに保健の課題として制作したものです。高校3年のぼくがみても明らかにおかしい点(JSとCSSの処理重複、not()はセレクタなのに文字列を指定している等々)がたくさんありますが、アーカイブとして残してあります。2030年とかになって、ぼくが就職するときにこれを見た雇い主の方々はゴミコードだなーと思って面接を落とさないでください。今のぼくはもっと普通に実務はできます。もっとまともなレポジトリが多分他にあるのでここを見るのもいいとは思いますが、他のところも見てほしいです。
+    </p>
+  </div>
+</div>
     <div id="myModal" class="modal">
       <span class="close">&times;</span>
       <img class="modal-content" id="img01" />
@@ -672,7 +681,7 @@
         <ruby>ライセンス<rt>らいせんす</rt></ruby>
       </h2>
       <p class="minimoji">
-        作成日:2024-9-27 最終更新日:2024-10-6 ライセンス最終改定日:2024-10-5
+        作成日:2024-9-27 最終更新日:2026-1-3 ライセンス最終改定日:2024-10-5
       </p>
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
         <img
@@ -684,7 +693,7 @@
         />
       </a>
       <p>
-        © kouryou118103 - 2024<br />この作品は
+        © kouryou118103 - 2024-2026<br />この作品は
         <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"
           >クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス</a
         >（CC BY-SA 4.0）の下に提供されています。CC BY-SA
@@ -692,5 +701,23 @@
       </p>
     </section>
     <script src="script.js" defer></script>
+    <script>
+  window.onload = function() {
+    var modal = document.getElementById("notice-modal");
+    var closeBtn = document.querySelector(".modal .close");
+
+    modal.style.display = "block";
+
+    closeBtn.onclick = function() {
+      modal.style.display = "none";
+    };
+
+    modal.onclick = function(event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  };
+</script>
   </body>
 </html>
